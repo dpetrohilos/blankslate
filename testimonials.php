@@ -43,7 +43,7 @@ $the_query = new WP_Query( $args ); ?>
 
 <div id="work" class="work js-scroll slide-right v-rhythm"> <div class="work-item work-item-1">
 <h5>
-    Past Projects 
+Past Partners  
 </h5></div>
 <div class="work-item work-item-2">
 <ul class="work-logos js-scroll slide-right">
