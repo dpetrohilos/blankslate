@@ -1,0 +1,176 @@
+@import url(testimonials.css);
+
+  /*General stuff*/
+    .portfolio-single-post {
+    background: var(--black);
+    fill: var(--white);
+    }
+
+    .portfolio-single-post 
+    .content {
+    color: var(--white);
+    }
+
+    .portfolio-single-post #branding .cls-1, .portfolio-single-post #branding circle {
+    fill: var(--white);
+    }
+
+
+    .bar {
+    background-color: var(--white);
+    }
+
+    .portfolio-single-post h1, .portfolio-single-post h2, .portfolio-single-post h3, .portfolio-single-post h4, .portfolio-single-post h5, .portfolio-single-post h6, .portfolio-single-post p, .portfolio-single-post li, .portfolio-single-post .sub-heading, #label {
+    color: var(--white);
+    }
+
+    #footer p {
+    color: var(--black)  ;
+    }
+
+    #footer .cls-1, #footer circle {
+    fill: var(--black);
+    }
+
+  /*first second level, fourth level layout*/
+
+    .portfolio-first-level, .portfolio-fourth-level {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    gap: var(--gap)
+    }
+
+    .portfolio-single-post .grid-item-1, .portfolio-fourth-level .grid-item-1 .grid-item-1  {
+    grid-area: 1 / 1 / 6 / 10;
+    }
+
+    .portfolio-single-post .grid-item-2, .portfolio-fourth-level .grid-item-1 .grid-item-2 {
+    grid-area: 2 / 5 / 9 / 11; 
+    background: var(--black);
+    padding: var(--gap);
+    }
+
+    .portfolio-single-post .grid-item-1 img {
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+
+    .portfolio-single-post .grid-item, .portfolio-fourth-level .grid-item {
+        display: block; 
+        }
+
+  /*Second second level*/
+    .portfolio-second-level {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    
+    }
+
+    .portfolio-second-level div:nth-child(1)  {
+        grid-area: 1 / 1 / 12 / 13;
+    
+    }
+
+    .portfolio-second-level aside:nth-child(2) {  
+    grid-area: 2 / 9 / 3 / 12;
+    background: var(--black);
+    color: var(--white)  ; 
+    padding: var(--gap);
+
+    }
+
+    .portfolio-second-level .cite, .citation {
+        color: var(--white) !important;
+    }
+
+    .portfolio-second-level aside:nth-child(2) img {
+    width: 100%;
+    height: 3rem; 
+    max-width: 22rem;
+    }
+
+    .portfolio-second-level aside:nth-child(2) p,   .portfolio-second-level aside:nth-child(2) blockquote {
+        color: var(--white)  ;
+    }
+/*Fourth third level*/
+
+    .portfolio-third-level {
+        display: grid;
+grid-template-columns: repeat(12, 1fr);
+grid-template-rows: auto;
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+
+    }
+
+.portfolio-third-level div:nth-child(1) { grid-area: 1 / 1 / 4 / 7; }
+.portfolio-third-level div:nth-child(2) { grid-area: 1 / 7 / 4 / 13; }
+.portfolio-third-level aside:nth-child(3) { grid-area: 3 / 2 / 5 / 7; 
+background: var(--black); 
+padding: var(--gap);
+}
+
+    
+/*Make Work On Mobile*/
+
+
+
+
+@media (min-width: 42.5em) and (max-width: 76.8em) {  
+ 
+    .portfolio-single-post .grid-item-1, .portfolio-fourth-level .grid-item-1 .grid-item-1  {
+        grid-area: 1 / 1 / 11 / 11;
+        }
+    
+        .portfolio-single-post .grid-item-2, .portfolio-fourth-level .grid-item-1 .grid-item-2 {
+        grid-area: 4 / 5 / 12 / 12; 
+        }
+        .portfolio-single-post .grid-item-1 img {
+            aspect-ratio: 9 / 10;
+        }
+    .portfolio-second-level aside:nth-child(2) {  
+        grid-area: 2 / 5 / 3 / 12;
+    
+        }   
+
+.portfolio-third-level div:nth-child(1) { grid-area: 1 / 1 / 4 / 6; }
+.portfolio-third-level div:nth-child(2) { grid-area: 4 / 1 / 7 / 6; }
+.portfolio-third-level aside:nth-child(3) { grid-area: 2 / 5 / 6 / 12; }
+            
+   
+
+}
+
+@media only screen and (max-width: 42.5em) { 
+
+
+    .portfolio-single-post .grid-item-1, .portfolio-fourth-level .grid-item-1 .grid-item-1  {
+        grid-area: 1 / 1 / 6 / 13;
+        }
+    .portfolio-single-post .grid-item-2, .portfolio-fourth-level .grid-item-1 .grid-item-2 {
+        grid-area: 6 / 1 / 12 / 13; 
+        }
+        .portfolio-single-post .grid-item-1 img {
+            aspect-ratio: 9 / 10;
+        }
+        
+    .portfolio-second-level div:nth-child(1),   .portfolio-second-level div:nth-child(1) img  {  
+         grid-area: 1 / 1 / 14 / 13;
+        
+    }   
+
+    .portfolio-second-level aside:nth-child(2) {  
+        grid-area: 15 / 1 / 16 / 13;
+    
+  
+    } 
+
+    .portfolio-third-level aside:nth-child(3) { grid-area: 5 / 1 / 8 / 13; }
+
+
+
+
+
+}

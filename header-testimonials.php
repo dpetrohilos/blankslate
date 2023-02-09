@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width" />
 
 <?php wp_head(); ?>
-
+<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(). '/css/testimonials.css' ?>">
 
 </head>
 <body <?php body_class(); ?>>
@@ -53,5 +53,3 @@
 
 
 </header>
-
-

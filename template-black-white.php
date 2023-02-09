@@ -1,4 +1,5 @@
-<?php get_header('page'); ?>
+<?php /* Template Name: Right Algined Page*/ ?>
+<?php get_header('black-page'); ?>
 </div>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <div id="black-page-first" class="black-page-first black-wrapper v-rhythm">

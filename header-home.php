@@ -8,6 +8,9 @@
 
 <?php wp_head(); ?>
 
+<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(). '/css/intro.css' ?>">
+<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(). '/css/portfolio.css' ?>">
+<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(). '/css/testimonials.css' ?>">
 
 </head>
 <body <?php body_class(); ?>>

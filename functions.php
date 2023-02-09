@@ -34,34 +34,7 @@ wp_enqueue_script( 'jquery' );
 add_action( 'wp_footer', 'blankslate_footer' );
 function blankslate_footer() {
 ?>
-<script>
-jQuery(document).ready(function($) {
-var deviceAgent = navigator.userAgent.toLowerCase();
-if (deviceAgent.match(/(iphone|ipod|ipad)/)) {
-$("html").addClass("ios");
-$("html").addClass("mobile");
-}
-if (deviceAgent.match(/(Android)/)) {
-$("html").addClass("android");
-$("html").addClass("mobile");
-}
-if (navigator.userAgent.search("MSIE") >= 0) {
-$("html").addClass("ie");
-}
-else if (navigator.userAgent.search("Chrome") >= 0) {
-$("html").addClass("chrome");
-}
-else if (navigator.userAgent.search("Firefox") >= 0) {
-$("html").addClass("firefox");
-}
-else if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) {
-$("html").addClass("safari");
-}
-else if (navigator.userAgent.search("Opera") >= 0) {
-$("html").addClass("opera");
-}
-});
-</script>
+
 <?php
 }
 add_filter( 'document_title_separator', 'blankslate_document_title_separator' );
@@ -164,3 +137,94 @@ return count( $comments_by_type['comment'] );
 return $count;
 }
 }
+
+
+function create_post_type_portfolio()
+{
+    register_taxonomy_for_object_type('category', 'Portfolio'); // Register Taxonomies for Category
+    register_taxonomy_for_object_type('post_tag', 'Portfolio');
+    register_post_type('Portfolio', // Register Custom Post Type
+        array(
+        'labels' => array(
+            'name' => __('Portfolio', 'Portfolio'), // Rename these to suit
+            'singular_name' => __('Portfolio', 'Portfolio'),
+            'add_new' => __('Add New', 'Portfolio'),
+            'add_new_item' => __('Add Portfolio', 'Portfolio'),
+            'edit' => __('Edit', 'Portfolio'),
+            'edit_item' => __('Edit Portfolio', 'Portfolio'),
+            'new_item' => __('New Portfolio', 'Portfolio'),
+            'view' => __('View Portfolio', 'Portfolio'),
+            'view_item' => __('View Portfolio ', 'Portfolio'),
+            'search_items' => __('Search Portfolio', 'Portfolio'),
+            'not_found' => __('No Portfolio found', 'Portfolio'),
+            'not_found_in_trash' => __('No Portfolio found in Trash', 'Portfolio')
+        ),
+        'public' => true,
+        'show_in_rest' => true,
+        'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
+        'has_archive' => true,
+        'supports' => array(
+            'title',
+            'editor',
+            'excerpt',
+            'thumbnail'
+        ), 
+        'can_export' => true, // Allows export in Tools > Export
+        'taxonomies' => array(
+            'post_tag',
+            'category'
+        ) // Add Category and Post Tags support
+
+
+
+    ));
+}
+add_action('init', 'create_post_type_portfolio'); // Add our HTML5 Blank Custom Post Type
+
+
+
+function create_post_type_Testimonials()
+{
+    register_taxonomy_for_object_type('category', 'Testimonials'); // Register Taxonomies for Category
+    register_taxonomy_for_object_type('post_tag', 'Testimonials');
+    register_post_type('Testimonials', // Register Custom Post Type
+        array(
+        'labels' => array(
+            'name' => __('Testimonials', 'Testimonials'), // Rename these to suit
+            'singular_name' => __('Testimonials', 'Testimonials'),
+            'add_new' => __('Add New', 'Testimonials'),
+            'add_new_item' => __('Add Testimonials', 'Testimonials'),
+            'edit' => __('Edit', 'Testimonials'),
+            'edit_item' => __('Edit Testimonials', 'Testimonials'),
+            'new_item' => __('New Testimonials', 'Testimonials'),
+            'view' => __('View Testimonials', 'Testimonials'),
+            'view_item' => __('View Testimonials ', 'Testimonials'),
+            'search_items' => __('Search Testimonials', 'Testimonials'),
+            'not_found' => __('No Testimonials found', 'Testimonials'),
+            'not_found_in_trash' => __('No Testimonials found in Trash', 'Testimonials')
+        ),
+        'public' => true,
+        'show_in_rest' => true,
+        'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
+        'has_archive' => true,
+        'supports' => array(
+            'title',
+            'editor',
+            'excerpt',
+            'thumbnail'
+        ), 
+        'can_export' => true, // Allows export in Tools > Export
+        'taxonomies' => array(
+            'post_tag',
+            'category'
+        ) // Add Category and Post Tags support
+
+
+
+    ));
+}
+add_action('init', 'create_post_type_Testimonials'); // Add our HTML5 Blank Custom Post Type
+
+
+?> 
+
