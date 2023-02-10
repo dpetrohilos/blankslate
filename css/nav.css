@@ -23,13 +23,13 @@ Nav
   
   .menu-bg{
     z-index: 1;
-    width: 100%;
+    width: 115%;
     height: 100%;
     background: url(img/BG-NAV.png) 100% 16rem no-repeat var(--black); 
     transition: 0.4s ease;
     position: fixed;
     top: 0;
-    left: -100vw;  
+    left: -116%;  
     
   }
   
