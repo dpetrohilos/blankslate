@@ -9,6 +9,8 @@ $the_query = new WP_Query( $args ); ?>
 
 <?php if ( $the_query->have_posts() ) : ?>
 <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+<?php $count = 0; ?>
+
 
 <article id="potfolio-wrapper-<?php the_field('Number'); ?>" class="full-bleed js-scroll fade-in-bottom v-rhythm potfolio-wrapper">
 <section id="portfolio-list-<?php the_field('Number'); ?>" class="portfolio">
@@ -21,8 +23,8 @@ $the_query = new WP_Query( $args ); ?>
 
 <div class="excerpt"><?php the_excerpt(); ?>
 </div>
-<a class="button button-1 btn-left" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">View Work</a>
-<a class="button button-2 .btn-left" href="/#portfolio-list-<?php the_field('number+'); ?>" title="<?php the_title_attribute(); ?>">Next Item</a>
+<a class="button" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">View Work</a>
+<a class="button" href="<?php the_field('next-link'); ?>" title="<?php the_title_attribute(); ?>">Next Item</a>
 
 
 </div>

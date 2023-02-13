@@ -5,9 +5,6 @@
   width: 100%; 
 }
 
-
-
-
 .portfolio {  
   display: flex;
   flex-direction: row;
@@ -55,10 +52,6 @@ width: 100%;
 max-width: 48vw; 
 
 
-}
-
-.portfolio-6 .button-2 {
-	display: none; 
 }
 
 @media (min-width: 76.8em) and (max-width: 102.4em) {

@@ -36,5 +36,3 @@ window.scrollBy({
   left: 0, 
   behavior: 'smooth' 
 });
-
-
