@@ -15,6 +15,8 @@ article:first-of-type {
 .testimonials-item-1 { 
 grid-area: 1 / 1 / 6 / 8;
 background: var(--white);
+padding-right: var(--gap);
+padding-block: var(--gap);
 }
 
 .testimonials-item-2 { grid-area: 2 / 7 / 10 / 13;
@@ -32,7 +34,13 @@ background: var(--white);
 
 }
 
-#third-row p {
+
+#third-row .quote-item-2  {
+  margin-top: var(--gap)
+}
+
+
+#third-row p, #services p {
   max-width: 66rem;
 }
 
@@ -43,6 +51,7 @@ background: var(--white);
   justify-content: normal;
   align-items: normal;
   align-content: normal;
+  margin-bottom: var(--gap);
 
 }
 
@@ -82,7 +91,7 @@ background: var(--white);
 #work .work-item-2 ul {  
 
 display: grid;
-grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
 
 
 
@@ -96,18 +105,11 @@ grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
 
 
 #services {
-
   grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
-
-
-
+  gap: var(--gap);
 }
 
-
-
-
-
-  @media (min-width: 76.8em) and (max-width: 102.4em) {
+@media (min-width: 76.8em) and (max-width: 102.4em) {
 
 
 
@@ -130,9 +132,6 @@ grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
 
     
   }
-
-
-
 @media (min-width: 42.5em) and (max-width: 76.8em) {    
 
 #services {

@@ -28,42 +28,7 @@
 </section>
 
 <div id="black-page-fourth" class="black-page-fourth black-wrapper v-rhythm js-scroll fade-in">
-<section id="services" class="grid wrapper">
-<div>
-<p class="sub-heading">We Work In</p>
-<ul>
-    <li>Wordpresss</li>
-    <li>Drupal</li>
-    <li>Webflow</li>
-    <li>Action Network</li>
-    <li>Hubspot</li>
-
-</ul>
-</div>
-
-<div>
-<p class="sub-heading">We Can Provide You With</p>
-<ul>
-    <li>Art Direction</li>
-    <li>Brand Strategy</li>
-    <li>Social Media Strategy</li>
-    <li>Custom Wordpress Theming</li>
-    <li>Conversion Rate Optimization</li>
-</ul>
-
-</div>
-
-<div>
-<p class="sub-heading">We Can Launch Your</p>
-<ul>
-    <li>Pitch Decks</li>
-    <li>White Paper</li>
-    <li>Social Media Campaigns</li>
-    <li>Digital Marketing Campaigns</li>
-    <li>SEO Campaigns</li>
-
-</ul>
-</div>
+<?php get_template_part( 'bottom-row', 'bottom-row' ); ?>
 
 </section>
 </div>

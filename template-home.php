@@ -1,3 +1,4 @@
+<?php /* Template Name: Use For Only Home*/ ?>
 <?php
 get_header('home');
 get_template_part( 'front-top', 'front-top' );

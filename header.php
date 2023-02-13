@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> <?php blankslate_schema_type(); ?>>
 <head>
@@ -8,6 +7,7 @@
 
 <?php wp_head(); ?>
 
+<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(). '/css/nav.css' ?>">
 
 </head>
 <body <?php body_class(); ?>>
@@ -17,21 +17,10 @@
 <div class="wrapper hidden">
 
 <header id="header" class="flex space-between not-fb container" role="banner">
-<div id="menu-bar" role="navigation hidden" >
+<?php get_template_part( 'nav', 'nav' ); ?>
 
-      <div id="menu" onclick="onClickMenu()">
-      <div id="label">Menu</div>
 
-        <div id="bar1" class="bar"></div>
-        <div id="bar2" class="bar"></div>
-        <div id="bar3" class="bar"></div>
-      </div>
-      <?php wp_nav_menu( array( 'theme_location' => 'primary-menu', 'link_before' => '<span itemprop="name">', 'link_after' => '</span>', 'menu_class' => 'nav', 'menu_id' => 'nav', 'container' => 'ul',
-		'container_class'      => 'nav',
-		'container_id'         => 'nav',
 
- ) ); ?>
-    </div>
 
 <div id="branding" class="hidden">
 

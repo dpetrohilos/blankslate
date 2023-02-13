@@ -25,8 +25,6 @@ Nav
   border: 0; 
   height: 6.8rem;
   background: transparent;
-  color: var(--black); 
-
 
 }
 
@@ -45,6 +43,7 @@ Nav
   position: fixed;
   top: 0;
   left: -102vw;  
+  color: var(--white);
   
 }
 
@@ -64,8 +63,7 @@ Nav
     margin: 2px 0;
     cursor: pointer;
     transition: 2s ease-in;
-    color: var(--black); 
-
+    color: var(--white);
     
   }
   
@@ -77,16 +75,16 @@ Nav
     width: 50px; 
     height: auto; 
     font-weight: 500;
-    color: var(--black); 
+    color: var(--white);
 
   } 
   
   .bar {
-    background-color:var(--black);
+    background-color:var(--white);
     display: block;
     transition: 0.3s ease;
     margin-left: auto;
-    color: var(--black);
+    color: var(--white);
   }
 
 
@@ -197,11 +195,11 @@ Nav
     transform: ease .3;
     margin-left: 95%;
   }
-  .change {
+  .change{
     display: block;
   }
   
-  .change #label, .change button, .change #label, .menu-bar button  {
+  .change #label {
     color: var(--white); 
   }
 

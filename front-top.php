@@ -1,16 +1,14 @@
-<section id="intro" class="grid">
+<main id="intro" class="grid">
 <div class="site-title-wrapper"><h1 class="site-title"><?php bloginfo( 'name' ); ?>, <br><?php bloginfo( 'description' ); ?>:</h1>
+<div class="site-intro-wrapper"><?php the_field('front-page-message'); ?>
+<a href="<?php the_field('link-option'); ?>" class="button"><?php the_field('link-text'); ?></a>
 </div>
 
-<div class="site-intro-wrapper"><p>Repeater Digital believes in saying yes more than no, solving complex communication challenges with a creative eye. We design full service communication solutions for busy clients. By investing in our services, you save valuable time and resources. Based in Washington, DC we're in the business of changing narratives.</p>
-
-<a href="#portfolio" class="button">Our Portfolio</a>
-
 </div>
 
 
 
-</section>
+</main>
 
 
 

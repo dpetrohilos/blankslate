@@ -1,7 +1,4 @@
 
-
-
-
 /* Intro Area */
 
 #intro {
@@ -11,7 +8,7 @@ padding-block: var(--container);
   
 }
 
-#intro > .site-intro-wrapper > p {
+.site-intro-wrapper p {
   max-width: 66rem; 
   width: 100%; 
   min-width: 22rem;
