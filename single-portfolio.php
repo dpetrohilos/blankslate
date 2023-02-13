@@ -17,12 +17,12 @@
 
 </article>
 
-<section class="portfolio-second-level js-scroll slide-left portfolio-wrapper">
-<div class="js-scroll slide-left portfolio-second-item">
+<section class="portfolio-second-level js-scroll fade-in-bottom portfolio-wrapper">
+<div class="js-scroll fade-in-bottom portfolio-second-item">
 <img src="<?php the_field('secondary-image'); ?>" alt="<?php the_field('secondary-image-alt'); ?>" />
 </div>
 
-<aside class="background js-scroll slide-left portfolio-second-item">
+<aside class="background js-scroll fade-in-bottom portfolio-second-item">
 <p><strong>Work: </strong><?php the_field('aside-heading'); ?> <br></p> 
 <p><?php the_field('aside-fonts'); ?></p>
 <p><?php the_field('aside-message'); ?></p>
@@ -40,7 +40,7 @@
 <img src="<?php the_field('quaternary-image'); ?>"  alt="Image of <?php the_field('quaternary-image-alt'); ?>"  />
 </div>
 
-<aside class="pull-quote js-scroll slide-left portfolio-second-item">
+<aside class="pull-quote js-scroll fade-in-bottom portfolio-second-item">
 
 <blockquote class="quote-item testimonial"><p class="pull-quote"> <?php the_field('quote-text'); ?><p></blockquote>
 <div class="cite flex">

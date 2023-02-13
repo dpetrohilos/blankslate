@@ -99,15 +99,55 @@ unset( $sizes['2048x2048'] );
 return $sizes;
 }
 add_action( 'widgets_init', 'blankslate_widgets_init' );
+
 function blankslate_widgets_init() {
 register_sidebar( array(
-'name' => esc_html__( 'Sidebar Widget Area', 'blankslate' ),
+'name' => esc_html__( 'First Sidebar Widget Area', 'blankslate' ),
 'id' => 'primary-widget-area',
 'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
 'after_widget' => '</li>',
-'before_title' => '<h3 class="widget-title">',
+'before_title' => '<h3 class="widget-title sub-heading">',
 'after_title' => '</h3>',
 ) );
+
+register_sidebar(
+array(
+    'name' => esc_html__( 'Second Sidebar Widget Area', 'blankslate' ),
+    'id' => 'second-widget-area',
+    'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+    'after_widget' => '</li>',
+    'before_title' => '<h3 class="widget-title sub-heading">',
+    'after_title' => '</h3>',
+    )
+);
+
+register_sidebar(
+    array(
+        'name' => esc_html__( 'Third Sidebar Widget Area', 'blankslate' ),
+        'id' => 'third-widget-area',
+        'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+        'after_widget' => '</li>',
+        'before_title' => '<h3 class="widget-title sub-heading">',
+        'after_title' => '</h3>',
+        )
+
+
+
+    );
+
+    register_sidebar(
+        array(
+            'name' => esc_html__( 'Fourth Sidebar Widget Area', 'blankslate' ),
+            'id' => 'fourth-widget-area',
+            'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+            'after_widget' => '</li>',
+            'before_title' => '<h3 class="widget-title sub-heading">',
+            'after_title' => '</h3>',
+            )
+    
+    
+    
+        );
 }
 add_action( 'wp_head', 'blankslate_pingback_header' );
 function blankslate_pingback_header() {

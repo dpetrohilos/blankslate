@@ -2,11 +2,11 @@
 <section id="third-row" class="grid js-scroll fade-in-bottom bg-white">
 
 <div class="grid-item-1 grid-item v-rhythm">
-<h4>What Are People Saying</h4>
+<h3>What Are People Saying</h3>
 <?php
 $args = array(
     'post_type' => 'testimonials',
-    'posts_per_page' => 1,
+    'posts_per_page' => 2,
     'orderby' => 'rand', 
     'order' => 'asc',
 );
@@ -16,8 +16,9 @@ $the_query = new WP_Query( $args ); ?>
 
 
 <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+<?php $i = 0; ?>
 
-<blockquote class="quote-item testimonial"><p class="pull-quote"> <?php the_field('Qoute'); ?><p></blockquote>
+<blockquote class="quote-item <?= ++$i === 2 ? $i . 'testimonial-quote-item' : $i ?>"><p class="pull-quote"> <?php the_field('Qoute'); ?><p></blockquote>
 
 
 <div class="cite flex">
@@ -26,9 +27,6 @@ $the_query = new WP_Query( $args ); ?>
 <p><cite> — <?php the_field('quote-source'); ?>    </cite></p>
 </div></div>
 
-<div>
-<a href="/testimonials" class="quote item button center" >More Testimonials</a> 
-</div>
 
 
 
@@ -39,14 +37,19 @@ $the_query = new WP_Query( $args ); ?>
 <?php wp_reset_postdata(); ?>
 <?php endif; ?>
 
+
+<div>
+<a href="/testimonials" class="quote item button center" >More Testimonials</a> 
 </div>
 
-<div id="work" class="work js-scroll slide-right v-rhythm"> <div class="work-item work-item-1">
-<h5>
+</div>
+
+<div id="work" class="work js-scroll v-rhythm fade-in-top"> <div class="work-item work-item-1">
+<h4>
 Past Partners  
-</h5></div>
+</h4></div>
 <div class="work-item work-item-2">
-<ul class="work-logos js-scroll slide-right">
+<ul class="work-logos js-scroll fade-in-bottom">
 <li>
 <img height="200" width="200" src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/brands/logo-1.png" alt="Nat Geo" class="brand-image">
 </li>
@@ -89,47 +92,7 @@ Past Partners
 
 
 
-<section id="services" class="grid wrapper js-scroll fade-in-bottom">
+<?php get_template_part( 'bottom-row', 'bottom-row' ); ?>
 
-
-
-<div>
-<p class="sub-heading">We Work In</p>
-<ul>
-    <li>Wordpresss</li>
-    <li>Drupal</li>
-    <li>Webflow</li>
-    <li>Action Network</li>
-    <li>Hubspot</li>
-
-</ul>
-</div>
-
-<div>
-<p class="sub-heading">We Can Provide You With</p>
-<ul>
-    <li>Art Direction</li>
-    <li>Brand Strategy</li>
-    <li>Social Media Strategy</li>
-    <li>Custom Wordpress Theming</li>
-    <li>Conversion Rate Optimization</li>
-</ul>
-
-</div>
-
-<div>
-<p class="sub-heading">We Can Launch Your</p>
-<ul>
-    <li>Pitch Decks</li>
-    <li>White Paper</li>
-    <li>Social Media Campaigns</li>
-    <li>Digital Marketing Campaigns</li>
-    <li>SEO Campaigns</li>
-
-</ul>
-</div>
-
-
-</section>
 
 </div>
