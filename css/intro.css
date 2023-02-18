@@ -1,0 +1,35 @@
+
+/* Intro Area */
+
+#intro {
+
+padding-block: var(--container);
+      
+  
+}
+
+.site-intro-wrapper p {
+  max-width: 66rem; 
+  width: 100%; 
+  min-width: 22rem;
+}
+
+
+
+
+@media (min-width: 76.8em) and (max-width: 102.4em) {
+
+    
+
+}
+
+@media (min-width: 42.5em) and (max-width: 76.8em) {
+
+    
+}
+
+@media only screen and (max-width: 42.5em) {
+
+    
+
+}

@@ -1,0 +1,63 @@
+
+.wrapper {
+
+    max-width: 190rem;
+    width: 100%; 
+    margin-inline: auto;
+    padding-block: 2rem;
+    padding-inline: var(--container);
+
+  } 
+.v-rhythm {
+  padding-block: var(--container);
+}
+
+.bg-white {
+  background: var(--white);
+}
+
+.full-bleed {
+
+padding: 0; 
+
+}
+
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+@media (min-width: 76.8em) and (max-width: 102.4em) {
+
+
+.wrapper {
+
+  padding-inline: var(--container-large);
+
+
+} 
+
+
+}
+
+@media (min-width: 42.5em) and (max-width: 76.8em) {
+
+  .wrapper {
+
+    padding-inline: var(--container-medium);
+  
+  
+  } 
+}
+
+@media only screen and (max-width: 42.5em) {
+  .wrapper {
+
+    padding-inline: var(--container-small);
+  
+  
+  } 
+}

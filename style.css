@@ -1,21 +1,19 @@
 /*
-Theme Name: BlankSlate
-Theme URI: https://github.com/tidythemes/blankslate
-Author: TidyThemes
-Author URI: https://github.com/tidythemes
-Description: Donations: https://calmestghost.com/donate. BlankSlate is the definitive WordPress boilerplate starter theme. We've carefully constructed the most clean and minimalist theme possible for designers and developers to use as a base to build websites for clients or to build completely custom themes from scratch. Clean, simple, unstyled, semi-minified, unformatted, and valid code, SEO-friendly, jQuery-enabled, no programmer comments, standardized and as white label as possible, and most importantly, the CSS is reset for cross-browser-compatability and no intrusive visual CSS styles have been added whatsoever. A perfect skeleton theme. For support and suggestions, go to: https://github.com/tidythemes/blankslate/issues. Thank you.
-Tags: accessibility-ready, one-column, two-columns, custom-menu, featured-images, microformats, sticky-post, threaded-comments, translation-ready
-Version: 2023
-Requires at least: 5.2
-Tested up to: 6.1
-Requires PHP: 7.0
-License: GNU General Public License v3 or Later
-License URI: https://www.gnu.org/licenses/gpl.html
-Text Domain: blankslate
-
-BlankSlate WordPress Theme © 2011-2023 TidyThemes
-BlankSlate is distributed under the terms of the GNU GPL
+Theme Name: Repeater Digital 2023
+Author URI: Repeater.Digital
 */
+
+
+@import url(css/layout.css);
+@import url(css/header.css);
+@import url(css/nav.css);
+@import url(css/footer.css);
+@import url(css/animate.css);
+
+
+
+
+
 
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}html{scroll-behavior:smooth}body{line-height:1}a{text-decoration-skip-ink:auto}a[href^="tel"]{color:inherit;text-decoration:none}button{outline:0}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}q{display:inline;font-style:italic}q:before{content:'"';font-style:normal}q:after{content:'"';font-style:normal}textarea,input[type="text"],input[type="button"],input[type="submit"],input[type="reset"],input[type="search"],input[type="password"]{-webkit-appearance:none;appearance:none;border-radius:0}input[type="search"]{-webkit-appearance:textfield}table{border-collapse:collapse;border-spacing:0}th,td{padding:2px}big{font-size:120%}small,sup,sub{font-size:80%}sup{vertical-align:super}sub{vertical-align:sub}dd{margin-left:20px}kbd,tt{font-family:courier;font-size:12px}ins{text-decoration:underline}del,strike,s{text-decoration:line-through}dt{font-weight:bold}address,cite,var{font-style:italic}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 .sticky{}.bypostauthor{}.wp-caption{}.wp-caption-text{}.gallery-caption{}.alignright{}.alignleft{}.aligncenter{}
@@ -24,3 +22,793 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 .skip-link{left:-9999rem;top:2.5rem;z-index:999999999;text-decoration:underline}
 .skip-link:focus{display:block;left:6px;top:7px;font-size:14px;font-weight:600;text-decoration:none;line-height:normal;padding:15px 23px 14px;z-index:100000;right:auto}
 .visually-hidden:not(:focus):not(:active), .form-allowed-tags:not(:focus):not(:active){position:absolute !important;height:1px;width:1px;overflow:hidden;clip:rect(1px 1px 1px 1px);clip:rect(1px, 1px, 1px, 1px);white-space:nowrap}
+
+
+:root {
+    --body-copy: #333333;
+    --black: #1a1a1a;
+    
+    --light-backgrond: #dddddd; 
+    --white: #f0f0f5; 
+    
+    --base: 1.2rem;    
+    --container: 8rem;
+    --container-large: calc(var(--container) - 2rem);
+    --container-medium: calc(var(--container) / 2);
+    --container-small: calc(var(--container) / 4);
+    --gap: clamp(2rem, 2vw + 1rem, 4rem);   
+
+    --font-weight-300: 300;
+    --font-weight-500: 500;
+    --font-weight-700: 700;
+    --font-weight-800: 800;
+
+/* source https://codepen.io/fluxus/pen/BMGKMK*/
+    --baseline: calc(12 * 1px);
+    /* This is our baseline */
+    --base-line-height: calc(var(--baseline) * 2);
+    /* Base line height is a multiple of the baseline */
+    --base-font-size: 10px;
+
+    /* ==== Spacing based on baseline ==== */
+    --spacing-1: var(--baseline);
+    --spacing-2: calc(var(--baseline) * 2);
+    --spacing-3: calc(var(--baseline) * 3);
+    --spacing-4: calc(var(--baseline) * 4);
+    --spacing-5: calc(var(--baseline) * 5);
+    --spacing-6: calc(var(--baseline) * 6);
+    --spacing-7: calc(var(--baseline) * 7);
+    --spacing-8: calc(var(--baseline) * 8);
+    --spacing-9: calc(var(--baseline) * 9);
+    --spacing-10: calc(var(--baseline) * 10);
+
+/* https://www.fluid-type-scale.com */ 
+--font-size-base: clamp(1.6rem, 0.6818vw + 1.3273rem, 2.2rem);
+--font-size-md: clamp(1.8rem, 1.287vw + 1.2852rem, 2.9326rem);
+--font-size-lg: clamp(2.025rem, 2.1411vw + 1.1686rem, 3.9092rem);
+--font-size-xl: clamp(2.2781rem, 3.3327vw + 0.945rem, 5.2109rem);
+--font-size-xxl: clamp(2.5629rem, 4.981vw + 0.5705rem, 6.9461rem);
+--font-size-xxxl: clamp(2.8833rem, 7.2454vw + -0.0149rem, 9.2592rem); 
+
+
+/*Portfolio layout*/ 
+
+--portfolio-image: minmax(22rem, 72rem);
+--portfolio-text: minmax(22, 84rem);
+--shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19)
+
+
+
+  }
+  
+
+
+html { 
+  scroll-behavior: smooth;
+  font-weight: var(--font-weight-300);
+  line-height: var(--base-line-height);
+  font-size: var(--base-font-size);
+
+}
+
+body {
+    font-family: 'nexa', sans-serif;
+    height: 100vh;
+    background-color: var(--white);
+}
+*:focus {
+  outline: 3px dotted var(--black);
+  outline-offset: 2px;
+}  
+  
+
+img {
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+}
+
+
+/*css now acts like baseline*/
+/*take that patrick!*/ 
+/*this has to live on the style page*/ 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+cite {
+
+  --line-height: calc(var(--baseline) * var(--baseline-multi));
+  --baseline-offset: calc((var(--line-height) - var(--cap-height) * var(--font-size)) / 2);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  padding-top: var(--baseline-offset);
+  letter-spacing: -.0125rem;
+
+
+
+} 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: capitalize;
+}
+
+p {
+  margin-bottom: var(--font-size-base);
+  padding-bottom: var(--font-size-base);
+}
+
+strong, b {font-weight: 800;}
+
+i, em {
+  font-style: italic;
+}
+
+.content a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a {
+  color: var (--black);
+  text-decoration: none;
+}
+
+.content a {
+  background:
+    linear-gradient(
+      to right,
+      rgba(100, 200, 200, 1),
+      rgba(100, 200, 200, 1)
+    ),
+    linear-gradient(
+      to right,
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 180, 1),
+      rgba(0, 100, 200, 1)
+  );
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+
+
+
+@font-face {
+  font-family: "nexa";
+  src: url("fonts/NexaBook.otf");
+  src: url("fonts/NexaBook.woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-weight: 300; 
+}
+
+@font-face {
+  font-family: "nexa";
+  src: url("fonts/NexaRegular.otf");
+  src: url("fonts/NexaRegular.woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-weight: 500; 
+}
+@font-face {
+  font-family: "nexa";
+  src: url("fonts/NexaBold.otf");
+  src: url("fonts/NexaBold.woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-weight: 700; 
+}
+@font-face {
+  font-family: "nexa";
+  src: url("fonts/NexaXBold.otf");
+  src: url("fonts/NexaXBold.woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-weight: 800; 
+}
+
+/*css now acts like baseline*/
+/*take that patrick!*/ 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+cite {
+
+  --line-height: calc(var(--baseline) * var(--baseline-multi));
+  --baseline-offset: calc((var(--line-height) - var(--cap-height) * var(--font-size)) / 2);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  padding-top: var(--baseline-offset);
+  letter-spacing: -.0125rem;
+
+
+
+} 
+
+.content a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.content a {
+  background:
+    linear-gradient(
+      to right,
+      rgba(100, 200, 200, 1),
+      rgba(100, 200, 200, 1)
+    ),
+    linear-gradient(
+      to right,
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 180, 1),
+      rgba(0, 100, 200, 1)
+  );
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+
+.content a:hover {
+  background-size: 0 3px, 100% 3px;
+}
+
+.highlight {
+  box-shadow: inset 0 0 0 0 var(--black);
+  color: var(--black);
+  padding: 0 .25rem;
+  margin: 0 -.25rem;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+.highlight:hover {
+  color: var(--white) !important;
+  box-shadow: inset 1200px 0 0 0 var(--black);
+}
+
+/* Presentational styles */
+
+.highlight {
+  color: var(--black);
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, .big {
+  --cap-height: 0.826;
+  --font-size: var(--font-size-lg);
+  --baseline-multi: 4;
+  font-weight: var(--font-weight-700);
+  margin-bottom: calc((var(--line-height) - var(--cap-height) * var(--font-size)) / 2); 
+
+
+}
+p, ul, li, ol, cite, blockquote, cite, q {
+  font-size: var(--font-size-base);
+  --cap-height: 0.826;
+  --baseline-multi: 3;
+  font-weight: var(--font-weight-300);
+  color: var(--black);
+  margin-bottom: calc((var(--line-height) - var(--cap-height) * var(--font-size)) / 2); 
+
+}
+
+li {
+  --baseline-multi: 5;
+  padding-block-end: var(--font-size-base);
+
+}
+
+p, ul, ol {
+letter-spacing: -.0825rem;
+
+}
+
+a {
+  letter-spacing: -.0525rem;
+
+}
+
+.number {
+  --baseline-multi: 2;
+  font-weight: var(--font-weight-800);
+  color: var(--black);
+  --cap-height: 0.826;
+  --font-size: var(--font-size-base) !important;
+  font-weight: var(--font-weight-800);
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-weight: var(--font-weight-800);
+
+
+}
+
+.site-title {
+    color: var(--black);
+    --cap-height: 0.826;
+    --font-size: clamp(2.8833rem, 7.2454vw + -0.0149rem, 9.2592rem);
+    --baseline-multi: 10;
+    font-weight: var(--font-weight-800);
+    margin-bottom: 0;
+    text-transform: uppercase;
+
+}
+
+
+.contact-title {
+  --cap-height: 0.826;
+  --font-size: var(--font-size-lg);
+  --baseline-multi: 4;
+  font-weight: var(--font-weight-800);
+
+}
+
+.heading {
+  font-size: var(--font-size-xl);
+  --cap-height: 0.826;
+  --baseline-multi: 6;
+  font-weight: var(--font-weight-800);
+  color: var(--black);
+
+
+
+}
+
+.sub-heading {
+  font-size: var(--font-size-md);
+  --cap-height: 0.826;
+  --baseline-multi: 4;
+    color: var(--black);
+  font-weight: var(--font-weight-500);
+  padding-bottom: calc((var(--line-height) - var(--cap-height) * var(--font-size)) / 2); 
+
+
+
+}
+
+.button {
+
+  background: var(--black); 
+  color: var(--white);
+  padding: 2.4rem 4rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  margin: .4rem 0 0 0;
+  display: flex;
+  font-weight: var(--font-weight-500);
+  font-size: 1.6rem;
+  width: fit-content;
+  transition: 1s ease-in-out;
+  border: transparent 2px solid; 
+  align-items: center;
+  justify-content: center;
+
+
+
+
+
+}
+
+.button:hover, .button:focus {
+  background: var(--body-copy);
+  box-shadow: var(--shadow);
+
+}
+
+
+.button:visited {
+  margin-top: .8rem; 
+
+}
+
+
+
+
+.content a:hover {
+  background-size: 0 3px, 100% 3px;
+}
+
+.highlight {
+  box-shadow: inset 0 0 0 0 var(--black);
+  color: var(--black);
+  padding: 0 .25rem;
+  margin: 0 -.25rem;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+.highlight:hover {
+  color: var(--white);
+  box-shadow: inset 1200px 0 0 0 var(--black);
+}
+
+/* Presentational styles */
+
+.highlight {
+  color: var(--black);
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, .big {
+  --cap-height: 0.826;
+  --font-size: var(--font-size-lg);
+  --baseline-multi: 4;
+  font-weight: var(--font-weight-700);
+
+}
+p, ul, li, ol, cite, blockquote, cite, q {
+  font-size: var(--font-size-base);
+  --cap-height: 0.826;
+  --baseline-multi: 4;
+  font-weight: var(--font-weight-300);
+  color: var(--black);
+}
+
+p, ul, ol {
+letter-spacing: -.0825rem;
+
+}
+
+a {
+  letter-spacing: -.0525rem;
+
+}
+
+.number {
+  --baseline-multi: 4;
+  font-weight: var(--font-weight-800);
+  color: var(--black);
+  --cap-height: 0.826;
+  --font-size: var(--font-size-base) !important;
+  font-weight: var(--font-weight-800);
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-weight: var(--font-weight-800);
+
+
+}
+
+.site-title {
+    color: var(--black);
+    --cap-height: 0.826;
+    --font-size: clamp(2.8833rem, 7.2454vw + -0.0149rem, 9.2592rem);
+    --baseline-multi: 10;
+    font-weight: var(--font-weight-800);
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-weight: var(--font-weight-800);
+
+}
+
+.contact-title {
+  --cap-height: 0.826;
+  --font-size: var(--font-size-lg);
+  --baseline-multi: 4;
+  font-weight: var(--font-weight-800);
+  margin-bottom: clamp(1.2rem, .6818vw + 1.3273rem, 2.4rem);
+  font-weight: var(--font-weight-700);
+
+}
+
+.heading {
+  font-size: var(--font-size-xl);
+  --cap-height: 0.826;
+  --baseline-multi: 6;
+  font-weight: var(--font-weight-800);
+  color: var(--black);
+  font-weight: var(--font-weight-700);
+
+
+
+}
+
+ .sub-heading {
+  font-size: var(--font-size-base);
+  --cap-height: 0.826;
+  --baseline-multi: 5;
+  color: var(--black);
+  font-weight: var(--font-weight-700);
+
+
+}
+
+.pull-quote {
+  font-size: var(--font-size-base);
+  --cap-height: 0.826;
+  --baseline-multi: 4;
+  color: var(--black);
+
+
+}
+
+
+.wp-block-quote {
+  margin: 1.2rem var(--gap) 1.2rem -50%;
+  padding: var(--gap);
+  width: fit-content;
+  max-width: 66rem;
+  float: left;
+}
+
+.wp-block-quote p {
+  font-size: var(--font-size-xl);
+  --cap-height: 0.826;
+  --baseline-multi: 5;
+  color: var(--black);
+  font-weight: var(--font-weight-700);
+padding: 0;
+
+  
+}
+
+::selection {
+  background-color: var(--black);
+  color: var(--light-backgrond);
+  text-shadow: none; 
+}
+
+
+.portfolio-single-post ::selection, #menu-bar ::selection, .black-page ::selection, .black-page {
+  background-color: var(--light-backgrond);
+  color: var(--black);
+  text-shadow: none; 
+}
+
+
+.background ::selection, #footer  ::selection {
+  background-color: var(--black);
+  color: var(--light-backgrond);
+  text-shadow: none; 
+}
+
+
+
+/*controls base line height for different screen sizes*/
+
+@media (min-width: 76.8em) and (max-width: 102.4em) { 
+
+  /*typography on lg screens*/
+  h1, h2, h3, h4, h5, h6  {
+    --baseline-multi: 4;
+ 
+}
+
+.site-title {
+
+    --baseline-multi: 8;
+
+}
+
+.contact-title {
+    --baseline-multi: 5;
+  
+  }
+  
+  .heading {
+    --baseline-multi: 5;
+  
+  }
+  
+  
+.sub-heading {
+    --baseline-multi: 5;
+  
+  }
+  
+  p, ul, li, ol, cite, .pull-quote {
+    --baseline-multi: 3;
+  }
+
+  .wp-block-quote {
+    margin: 1.2rem var(--gap) 1.2rem -25%;
+    padding: var(--gap);
+    width: fit-content;
+    max-width: 66rem;
+    float: left;
+  }
+  
+
+}
+
+@media (min-width: 42.5em) and (max-width: 76.8em) { 
+
+  /*typography on mobile*/
+  h1, h2, h3, h4, h5, h6  {
+    --baseline-multi: 5;
+ 
+}
+
+.site-title {
+
+    --baseline-multi: 6;
+
+}
+
+.contact-title {
+    --baseline-multi: 5;
+  
+  }
+  
+  .heading {
+    --baseline-multi: 5;
+  
+  }
+  
+  
+.sub-heading {
+    --baseline-multi: 5;
+  
+  }
+  
+  p, ul, li, ol, cite, .pull-quote {
+    --baseline-multi: 3;
+  }
+
+  .wp-block-quote {
+    margin: 1.2rem 0 0;
+    padding: var(--gap) 0;
+    width: fit-content;
+    max-width: 76rem;
+    float: none;
+  }
+  
+}
+
+@media only screen and (max-width: 42.5em) {
+
+
+  /*typography on mobile*/
+  h1, h2, h3, h4, h5, h6  {
+    --baseline-multi: 5;
+ 
+}
+
+.site-title {
+
+    --baseline-multi: 4;
+
+}
+
+.contact-title {
+    --baseline-multi: 3;
+  
+  }
+  
+  .heading {
+    --baseline-multi: 3;
+  
+  }
+  
+  
+.sub-heading {
+    --baseline-multi: 5;
+  
+  }
+  
+  p, ul, li, ol, cite, .pull-quote {
+    --baseline-multi: 3;
+  }
+
+  .wp-block-quote {
+    margin: 1.2rem 0;
+    padding: var(--gap) 0;
+    width: fit-content;
+    max-width: 42rem;
+    float: none;
+  }
+
+}
+
+/*desktop off and on classes*/
+
+.desktop {display: block;}
+    
+.mobile {
+  display: none; 
+}
+
+@media (min-width: 76.8em) and (max-width: 102.4em) {
+
+.desktop {display: block;}
+    
+.mobile {
+  display: none; 
+}
+}
+
+@media (min-width: 42.5em) and (max-width: 76.8em) {
+
+  .desktop {display: none;}
+    
+.mobile {
+  display: block; 
+}
+
+}
+
+@media only screen and (max-width: 42.5em) {
+.desktop {display: none;}
+    
+.mobile {
+  display: block; 
+}
+}
+
+
+.next-nav {
+  position: fixed;
+  width: 4rem; 
+  bottom: 2rem;
+  left: 2rem;
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: normal;
+  align-content: normal;
+
+}
+
+
+.next-nav .link {
+
+  background: var(--black);
+  color: var(--white);
+  box-shadow: var(--shadow);
+  margin-top: 1.2rem; 
+  width: 4rem; 
+  height: 4rem;
+  border-radius: 100%;
+
+  
+
+}
+
+
+.next-nav .link span {
+
+  display: flex;
+
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 4rem; 
+  width: 4rem;
+
+}
+
+.next-nav a:nth-child(1) {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+.next-nav a:nth-child(2) {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+
+}
+
+.next-nav .link:hover {
+  background: var(--body-copy);
+
+}

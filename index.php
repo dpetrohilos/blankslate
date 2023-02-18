@@ -6,3 +6,5 @@ comments_template();
 endwhile; endif;
 get_template_part( 'nav', 'below' );
 get_footer();
+
+?>
